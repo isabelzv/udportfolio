@@ -1,0 +1,10 @@
+    <!--
+    "no transform" tells CDN not to convert image or other doc formats.
+    "public" lets the CDN know that the response of the origin server is not specific to the end user, so can be used for other clients requests.
+    "max-age" age is seconds that an asset expires from cache. Here it is set relatively high, because requests to the site and relatively low (ave <1/hr).
+    "s-maxage" is explicitly for the CDNs, will override max-age.
+    -->
+    Cache-Control: no-transform, public, max-age=90000, s-maxage=90000
+    <!-- <meta etag=""> -->
+    <!-- "vary=accept-encoding" tells CDN to request compressed content fromt the origin server and to serve the compressed cache version. -->
+    Vary: Accept-Encoding
