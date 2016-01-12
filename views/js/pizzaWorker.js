@@ -1,4 +1,5 @@
 // Here are arrays of all possible pizza ingredients.
+this.onmessage = function() {
 var pizzaIngredients = {};
 pizzaIngredients.meats = [
   "Pepperoni",
@@ -177,8 +178,10 @@ var makeRandomPizza = function() {
   pizza = pizza + ingredientItemizer(selectRandomCrust());
 
   return pizza;
+  postMessage(pizza);
 }
+};
 
-this.onmessage = function() {
-  postMessage(makeRandomPizza());
-}
+//this.onmessage = function() {
+  //postMessage(makeRandomPizza());
+//}
