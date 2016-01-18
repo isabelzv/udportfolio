@@ -1,3 +1,17 @@
+# Website Optimization
+===============================
+
+This demonstration website has been optimized to score over 90 on Google's PageSpeed Insights for index.html and render at at least 60 frames/second on scrolling for views/pizza.html.
+
+## Getting Started
+
+* Download or clone all of the files in the Github repo.
+* Right click on the index.html file and click on "open in browser".
+* Navigate to Cam's Pizzaria page to check for 60 frames/second scroll rendering. You can open Google dev tools and take a timeline of scrolling to see rendering times.
+* To check speed of pizza resizing, open dev tools, use the slider to resize the pizza's and check in the console for time taken.
+
+## Contributing
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).

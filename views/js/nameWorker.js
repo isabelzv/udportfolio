@@ -158,6 +158,6 @@ function randomName() {
   return generator(adjectives[randomNumberAdj], nouns[randomNumberNoun]);
 }
 
-this.onmessage = function() {
-  postMessage(randomName())
+this.onmessage = function(e) {
+  postMessage({"name":randomName(), "id":e.data.id})
 }
