@@ -10,7 +10,18 @@ This demonstration website has been optimized to score over 90 on Google's PageS
 * Navigate to Cam's Pizzaria page to check for 60 frames/second scroll rendering. You can open Google dev tools and take a timeline of scrolling to see rendering times.
 * To check speed of pizza resizing, open dev tools, use the slider to resize the pizza's and check in the console for time taken.
 
-## Contributing
+## Optimizations
+### Scrolling
+* Moved DOM queries to outside the for loop by creating a variable for ScrollTop.
+* Used "getElementsByClassName" rather than querySelectorAll.
+* Implemented requestAnimationFrame with requestTick function, so that rAF is only called when last update has been made.
+* Reduced the number of movingPizza elements to the max needed for a large screen (3 rows of 8).
+* Made each movingPizza it's own layer, so that only those on screen would be composited.
+* Created a new movingPizza image of the exact size needed.
+
+### Resize Pizzas
+* simplified the changePizzaSizes function and got rid of determineDX function.
+* Used "getElementsByClassName" rather than querySelectorAll to get randomPizzaContainers.
 
 ## Website Performance Optimization portfolio project
 
