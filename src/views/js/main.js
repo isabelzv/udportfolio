@@ -400,28 +400,28 @@ cameron *at* udacity *dot* com
 
 var nameWorker = new Worker("js/nameWorker.js");
 nameWorker.onmessage = function(e) {
-  name = e.data.name
-  id = e.data.id
+  name = e.data.name;
+  id = e.data.id;
   if (name) {
     var pizzaName = document.getElementById("pizzaName" + id);
     pizzaName.innerHTML = name;
     return;
   }
-  console.log("No name returned.")
-}
+  console.log("No name returned.");
+};
 
 var pizzaWorker = new Worker("js/pizzaWorker.js");
 pizzaWorker.onmessage = function(e) {
-  ingredients = e.data.ingredients
-  id = e.data.id
+  ingredients = e.data.ingredients;
+  id = e.data.id;
   if (ingredients) {
     var ul = document.getElementById("pizzaIngredients" + id);
     ul.innerHTML = ingredients;
     return;
   }
 
-  console.log("No ingredients returned.")
-}
+  console.log("No ingredients returned.");
+};
 
 // returns a DOM element for each pizza
 var pizzaElementGenerator = function(i) {
@@ -464,7 +464,7 @@ var pizzaElementGenerator = function(i) {
   pizzaContainer.appendChild(pizzaDescriptionContainer);
   //}
   return pizzaContainer;
-}
+};
 
 // resizePizzas(size) is called when the slider in the "Our Pizzas" section of the website moves.
 var resizePizzas = function(size) {
@@ -536,7 +536,7 @@ var resizePizzas = function(size) {
   window.performance.measure("measure_pizza_resize", "mark_start_resize", "mark_end_resize");
   var timeToResize = window.performance.getEntriesByName("measure_pizza_resize");
   console.log("Time to resize pizzas: " + timeToResize[0].duration + "ms");
-}
+};
 
 window.performance.mark("mark_start_generating"); // collect timing data
 
@@ -606,7 +606,7 @@ function update() {
     cachedPhase[i] = 100 * Math.sin(cachedScrollTop + (i % 5)) - 200;
   }
 
-  for (var i = 0; i < items.length; i++) {
+  for (i = 0; i < items.length; i++) {
     pos = items[i].basicLeft + cachedPhase[i % 5];
 
     items[i].style.left = pos + 'px';

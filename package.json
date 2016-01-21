@@ -10,7 +10,9 @@
     "gulp-imagemin":"",
     "imagemin-pngquant":"",
     "gulp-htmlmin":"",
-    "gulp-csso":""
+    "gulp-csso":"",
+    "gulp-html5-lint":"",
+    "gulp-csslint":""
   },
   "scripts": {
     "test": "gulp test"

@@ -5,7 +5,7 @@ String.prototype.capitalize = function() {
 };
 
 // Pulls adjective out of array using random number sent from generator
-function getAdj(x){
+function getAdj(x) {
   switch(x) {
     case "dark":
       var dark = ["dark","morbid", "scary", "spooky", "gothic", "deviant", "creepy", "sadistic", "black", "dangerous", "dejected", "haunted",
@@ -56,17 +56,14 @@ function getAdj(x){
       "majestic", "grand", "stunning"];
       return praise;
     case "scientific":
-      var scientific = ["scientific", "technical", "digital", "programming", "calculating", "formulating", "cyberpunk", "mechanical", "technological",
+      var scientific = ["scientific", "technical", "digital", "programming", "calculating", "formulating", "cyberpunk", "mechanical", "techno68ical",
       "innovative", "brainy", "chemical", "quantum", "astro", "space", "theoretical", "atomic", "electronic", "gaseous", "investigative", "solar",
-      "extinct", "galactic"]
+      "extinct", "galactic"];
       return scientific;
     default:
-      var scientific = ["scientific", "technical", "digital", "programming", "calculating", "formulating", "cyberpunk", "mechanical", "technological",
-      "innovative", "brainy", "chemical", "quantum", "astro", "space", "theoretical", "atomic", "electronic", "gaseous", "investigative", "solar",
-      "extinct", "galactic"]
       return scientific;
-  };
-};
+  }
+}
 
 // Pulls noun out of array using random number sent from generator
 function getNoun(y) {
@@ -130,13 +127,9 @@ function getNoun(y) {
       "universe", "gravity", "darkMatter", "constellation", "circuit", "asteroid"];
       return scifi;
     default:
-      var scifi = ["robot", "alien", "raygun", "spaceship", "UFO", "rocket", "phaser", "astronaut", "spaceman", "planet", "star", "galaxy",
-      "computer", "future", "timeMachine", "wormHole", "timeTraveler", "scientist", "invention", "martian", "pluto", "jupiter", "saturn", "mars",
-      "quasar", "blackHole", "warpDrive", "laser", "orbit", "gears", "molecule", "electron", "neutrino", "proton", "experiment", "photon", "apparatus",
-      "universe", "gravity", "darkMatter", "constellation", "circuit", "asteroid"];
       return scifi;
-  };
-};
+  }
+}
 
 var adjectives = ["dark", "color", "whimsical", "shiny", "noise", "apocalyptic", "insulting", "praise", "scientific"];  // types of adjectives for pizza titles
 var nouns = ["animals", "everyday", "fantasy", "gross", "horror", "jewelry", "places", "scifi"];                        // types of nouns for pizza titles
@@ -149,7 +142,7 @@ function generator(adj, noun) {
   var randomNoun = parseInt(Math.random() * nouns.length);
   var name = "The " + adjectives[randomAdjective].capitalize() + " " + nouns[randomNoun].capitalize();
   return name;
-};
+}
 
 // Chooses random adjective and random noun
 function randomName() {
@@ -159,5 +152,5 @@ function randomName() {
 }
 
 this.onmessage = function(e) {
-  postMessage({"name":randomName(), "id":e.data.id})
-}
+  postMessage({"name":randomName(), "id":e.data.id});
+};
