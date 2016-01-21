@@ -6,7 +6,10 @@ This demonstration website has been optimized to score over 90 on Google's PageS
 ## Getting Started
 
 * Download or clone all of the files in the Github repo.
-* Right click on the index.html file and click on "open in browser".
+* In terminal run "npm install".
+* In terminal run "gulp".
+* In terminal navigate to dist directory and run "python -m SimpleHTTPServer 8000".
+* Open browser and navigate to "http://localhost:8000".
 * Navigate to Cam's Pizzaria page to check for 60 frames/second scroll rendering. You can open Google dev tools and take a timeline of scrolling to see rendering times.
 * To check speed of pizza resizing, open dev tools, use the slider to resize the pizza's and check in the console for time taken.
 
@@ -23,6 +26,14 @@ This demonstration website has been optimized to score over 90 on Google's PageS
 * simplified the changePizzaSizes function and got rid of determineDX function.
 * Used "getElementsByClassName" rather than querySelectorAll to get randomPizzaContainers.
 
+### Loading
+* created web workers to task out creation of randon pizza names and ingredients.
+
+### General
+* Used gulp build tool to optimize source code for distribution.
+* Minify html, css, js and image files in the project.
+
+# Original README (for reference)
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
