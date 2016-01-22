@@ -15,7 +15,8 @@
     "gulp-csslint":""
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "gulp": "gulp"
   },
   "name": "udportfolio",
   "description": "===============================",
